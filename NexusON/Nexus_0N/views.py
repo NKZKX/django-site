@@ -12,6 +12,11 @@ import logging
 import re
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+import sys
+from django.core.mail import send_mail
+
+# Carrega variáveis de ambiente do arquivo .env (se existir)
+
 
 load_dotenv()
 
@@ -117,33 +122,55 @@ Esta é uma notificação automática do sistema OXN
         '''.strip()
 
     def enviar_email(self):
-        """
-        Envia o email de notificação para o admin
+
+
+     try:
+        send_mail(
+                subject=f'Novo contato: {self.email_cliente}',
+                message=self.corpo_email,
+                from_email=self.remetente,
+                recipient_list=[self.destinatario],
+                fail_silently=False,)
+
+        logger.info(f"Email de notificação enviado com sucesso para {self.destinatario}")
+        logger.info(f"Nome do cliente: {self.nome_cliente}")
+
+     except Exception as e:
+                logger.error(f"Erro ao enviar email: {str(e)}", exc_info=True)
+                raise Exception("Erro ao enviar email")
+
+
+
+
+
+
+        # """
+        # Envia o email de notificação para o admin
         
-        Exceptions:
-            Exception: Se houver erro ao enviar o email
-        """
-        try:
-            self.msg.attach(MIMEText(self.corpo_email, 'plain'))
+        # Exceptions:
+        #     Exception: Se houver erro ao enviar o email
+        # """
+        # try:
+        #     self.msg.attach(MIMEText(self.corpo_email, 'plain'))
             
-            with smtplib.SMTP('smtp.gmail.com', 587) as servidor:
-                servidor.starttls()
-                servidor.login(self.remetente, self.senha)
-                texto = self.msg.as_string()
-                servidor.sendmail(self.remetente, self.destinatario, texto)
+        #     with smtplib.SMTP('smtp.gmail.com', 587) as servidor:
+        #         servidor.starttls()
+        #         servidor.login(self.remetente, self.senha)
+        #         texto = self.msg.as_string()
+        #         servidor.sendmail(self.remetente, self.destinatario, texto)
             
-            logger.info(f"Email de notificação enviado com sucesso para {self.destinatario}")
-            logger.info(f"Nome do cliente: {self.nome_cliente}")
+        #     logger.info(f"Email de notificação enviado com sucesso para {self.destinatario}")
+        #     logger.info(f"Nome do cliente: {self.nome_cliente}")
         
-        except smtplib.SMTPAuthenticationError:
-            logger.error("Erro de autenticação ao enviar email - credenciais inválidas")
-            raise Exception("Erro de autenticação de email - entre em contato")
-        except smtplib.SMTPException as e:
-            logger.error(f"Erro SMTP ao enviar email: {str(e)}", exc_info=True)
-            raise Exception("Erro ao enviar email - tente novamente mais tarde")
-        except Exception as e:
-            logger.error(f"Erro inesperado ao enviar email: {str(e)}", exc_info=True)
-            raise Exception("Erro ao processar email")
+        # except smtplib.SMTPAuthenticationError:
+        #     logger.error("Erro de autenticação ao enviar email - credenciais inválidas")
+        #     raise Exception("Erro de autenticação de email - entre em contato")
+        # except smtplib.SMTPException as e:
+        #     logger.error(f"Erro SMTP ao enviar email: {str(e)}", exc_info=True)
+        #     raise Exception("Erro ao enviar email - tente novamente mais tarde")
+        # except Exception as e:
+        #     logger.error(f"Erro inesperado ao enviar email: {str(e)}", exc_info=True)
+        #     raise Exception("Erro ao processar email")
 
 
 
