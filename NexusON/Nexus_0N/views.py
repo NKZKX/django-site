@@ -93,7 +93,7 @@ class EnviarEmail:
         self.nome_cliente = nome_cliente  # Nome do cliente, se fornecido
         self.telefone_cliente = telefone_cliente  # Telefone do cliente, se fornecido
         self.remetente = os.getenv('EMAIL_HOST_USER')  # Email da empresa que envia
-        self.destinatario = os.getenv('ADMIN_EMAIL', 'nicolasramossantos22@gmail.com')  # Email do admin
+        self.destinatario = os.getenv('ADMIN_EMAIL')  # Email do admin
         self.senha = os.getenv('SENHA_APP')  # Senha da empresa
         
         if not all([self.remetente, self.senha]):
