@@ -1,0 +1,493 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OXN — Agência Digital</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
+{% comment %} <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"> {% endcomment %}
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">O<span>X</span>N</a>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <!-- <li><a href="#projetos">Projetos</a></li> -->
+    <li><a href="#processo">Processo</a></li>
+    <li><a href="#precos">Preços</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.querySelector('#contato').scrollIntoView({behavior:'smooth'})">Fale Conosco</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="float-badge">
+    <div class="float-badge-text">Agência<br>Digital<br>—<br>2025</div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <div class="scroll-text">Scroll</div>
+  </div>
+
+  <div style="position:relative;">
+    <div class="hero-tag" data-text="Agência Digital">Agência Digital</div>
+    <h1 class="hero-title">
+      Construímos
+      <span class="line2">Presenças</span>
+      <span class="line3">Digitais</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        Criamos <strong>sites que vendem</strong>, automações que escalam e conteúdo que conecta. Da estratégia à entrega final — somos sua equipe digital.
+      </p>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-num">+240</span>
+          <span class="stat-label">Projetos<br>Entregues</span>
+        </div>
+        <div>
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Clientes<br>Satisfeitos</span>
+        </div>
+        <div>
+          <span class="stat-num">6x</span>
+          <span class="stat-label">ROI Médio<br>das Campanhas</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:48px;" class="hero-actions">
+      <a href="#servicos" class="btn-primary">Ver Serviços</a>
+      <a href="#projetos" class="btn-outline">Ver Projetos</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">Criação de Sites <span>✦</span> Automação <span>✦</span> Campanhas Digitais <span>✦</span> Gravação de Conteúdo <span>✦</span> SEO <span>✦</span> Branding <span>✦</span></div>
+    <div class="marquee-item">Criação de Sites <span>✦</span> Automação <span>✦</span> Campanhas Digitais <span>✦</span> Gravação de Conteúdo <span>✦</span> SEO <span>✦</span> Branding <span>✦</span></div>
+    <div class="marquee-item">Criação de Sites <span>✦</span> Automação <span>✦</span> Campanhas Digitais <span>✦</span> Gravação de Conteúdo <span>✦</span> SEO <span>✦</span> Branding <span>✦</span></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="servicos">
+  <div class="section-label" data-num="01">Serviços</div>
+  <div class="services-header">
+    <h2 class="services-title">O que a<br><em>OXN</em><br>faz por você</h2>
+    <p class="services-intro">Tudo que sua marca precisa para dominar o digital, sob um mesmo teto.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <span class="service-icon">⬡</span>
+      <div class="service-name">Criação de Sites</div>
+      <p class="service-desc">Sites institucionais, e-commerce, landing pages e portfólios. Design exclusivo, rápido e otimizado para conversão.</p>
+      <a href="#" class="service-arrow">Saiba mais →</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">02</span>
+      <span class="service-icon">⟳</span>
+      <div class="service-name">Automação</div>
+      <p class="service-desc">Automatize processos de vendas, CRM, e-mails e atendimento. Ganhe escala sem aumentar a equipe.</p>
+      <a href="#" class="service-arrow">Saiba mais →</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">03</span>
+      <span class="service-icon">◈</span>
+      <div class="service-name">Campanhas</div>
+      <p class="service-desc">Google Ads, Meta Ads e estratégia de conteúdo integrada. Atraímos o cliente certo na hora certa.</p>
+      <a href="#" class="service-arrow">Saiba mais →</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">04</span>
+      <span class="service-icon">▶</span>
+      <div class="service-name">Gravação</div>
+      <p class="service-desc">Produção de vídeos profissionais para redes sociais, YouTube, anúncios e treinamentos corporativos.</p>
+      <a href="#" class="service-arrow">Saiba mais →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<!-- <section class="section" id="projetos" style="padding-top:0;">
+  <div class="section-label" data-num="02">Projetos</div>
+  <div class="services-header">
+    <h2 class="services-title">Trabalhos<br>que <em>falam</em><br>por si</h2>
+  </div>
+  <div class="portfolio-grid reveal">
+    <div class="portfolio-item">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;padding:40px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:rgba(255,255,255,0.1);line-height:1;">FASHION</div>
+          <div style="width:60px;height:60px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;margin:20px auto;"></div>
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:4px;color:rgba(255,255,255,0.3);">BRAND.COM</div>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">E-Commerce + Branding</div>
+        <div class="portfolio-title">Loja Moda Premium</div>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#0d1117,#1c2526);display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--orange);opacity:0.5;">TECH</div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:4px;color:rgba(255,255,255,0.2);margin-top:8px;">STARTUP SaaS</div>
+          <div style="display:flex;gap:8px;margin-top:16px;justify-content:center;">
+            <div style="width:32px;height:4px;background:var(--orange);opacity:0.6;border-radius:2px;"></div>
+            <div style="width:20px;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;"></div>
+            <div style="width:48px;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Site + Automação</div>
+        <div class="portfolio-title">Startup SaaS</div>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a0a04,#2d1200);display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;">
+          <div style="width:80px;height:80px;border:3px solid var(--orange);border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;opacity:0.5;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--orange);">▶</div>
+          </div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);margin-top:16px;">CONTEÚDO</div>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Gravação + Edição</div>
+        <div class="portfolio-title">Série Corporativa</div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- PROCESS -->
+<section class="process-section" id="processo">
+  <div class="section-label" data-num="03">Processo</div>
+  <h2 class="services-title reveal">Como<br>trabalhamos</h2>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-name">Discovery</div>
+      <p class="step-desc">Imersão no seu negócio, público-alvo e objetivos para alinhar estratégia antes de qualquer linha de código.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-name">Estratégia</div>
+      <p class="step-desc">Definimos o plano de ação, wireframes e arquitetura da solução com prazo e entregáveis claros.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-name">Design</div>
+      <p class="step-desc">Identidade visual e UX criados para converter. Cada pixel pensado para gerar resultado.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-name">Execução</div>
+      <p class="step-desc">Desenvolvimento ágil, gravações e configuração de automações com entregas iterativas.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">05</div>
+      <div class="step-name">Lançamento</div>
+      <p class="step-desc">Go-live com suporte dedicado, monitoramento de performance e otimizações contínuas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing-section" id="precos">
+  <div class="section-label" data-num="04">Preços</div>
+  <div class="services-header">
+    <h2 class="services-title">Planos que<br><em>cabem</em><br>no seu plano</h2>
+    <p class="services-intro">Sem surpresas. Pacotes transparentes para cada fase do seu negócio.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <div class="pricing-name">Básico</div>
+      <div class="pricing-price"><span>R$</span>2.500</div>
+      <ul class="pricing-features">
+          <li>Site</li>
+          <li>Google ADS</li>
+        <!-- {% comment %} <li>Site institucional (até 5 páginas)</li> {% endcomment %}
+        {% comment %} <li>Design responsivo</li> {% endcomment %}
+        {% comment %} <li>SEO básico</li>
+        <li>Formulário de contato</li> {% endcomment %}
+        {% comment %} <li>30 dias de suporte</li> {% endcomment %} -->
+      </ul>
+      <a href="#contato" class="btn-pricing btn-pricing-outline">Contratar</a>
+    </div>
+    <div class="pricing-card featured reveal">
+      <div class="pricing-badge">Mais Popular</div>
+      <div class="pricing-name">Intermediário</div>  <!-- CORREÇÃO: nome do plano "Pro" adicionado, estava Growth antes  -->
+      <div class="pricing-price"><span>R$</span>4.000</div>
+      <ul class="pricing-features">
+        <li>Site (3 Páginas)</li>
+        <li>Automação de e-mails e CRM</li>
+        <li>Campanhas (Google + Meta)</li>
+        <li>2 vídeos</li>
+        <li>Suporte 90 dias</li>
+        <!-- <li>Site completo + Blog</li>
+        <li>Automação de e-mails e CRM</li>
+        <li>2 campanhas (Google + Meta)</li>
+        <li>2 vídeos institucionais</li>
+        <li>SEO avançado</li>
+        <li>90 dias de suporte</li> -->
+      </ul>
+      <a href="#contato" class="btn-pricing btn-pricing-dark">Contratar</a>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-name">Avançado</div>
+      <div class="pricing-price"><span>R$</span>5.000</div>
+      <ul class="pricing-features">
+        <li>Site ou e-commerce completo</li>
+        <li>Automação avançada + IA</li>
+        <li>Gestão mensal de campanhas</li>
+        <li>Produção de conteúdo mensal</li>
+        <li>Dashboard de performance</li>
+        <li>Suporte dedicado</li>
+      </ul>
+      <a href="#contato" class="btn-pricing btn-pricing-outline">Contratar</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-label" data-num="05">Depoimentos</div>
+  <h2 class="services-title reveal">O que nossos<br>clientes <em>dizem</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">A OXN transformou completamente nossa presença online. Em 3 meses, as vendas pelo site triplicaram. O ROI foi além de qualquer expectativa.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AM</div>
+        <div>
+          <div class="author-name">Ana Martins</div>
+          <div class="author-role">CEO — Boutique Alma</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">A automação que implementaram economizou mais de 40 horas semanais da nossa equipe. O sistema de follow-up agora funciona no piloto automático.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RO</div>
+        <div>
+          <div class="author-name">Rafael Oliveira</div>
+          <div class="author-role">Diretor Comercial — TechFlow</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">Os vídeos que produziram para nossa empresa superaram qualquer produtora que já contratamos. Profissionalismo e criatividade em outro nível.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">CS</div>
+        <div>
+          <div class="author-name">Carla Santos</div>
+          <div class="author-role">Head de Marketing — Grupo Vero</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<!-- CORREÇÃO: section envolve o form (era o contrário antes), id único em "contato" -->
+<section class="cta-section" id="contato">
+  <form id="envia_email" action="/envia_email/" method="post">
+    {% csrf_token %}
+    <h2 class="cta-title">
+      <span>Pronto para</span>
+      <span class="accent">crescer</span>
+      <span class="outline">de verdade?</span>
+    </h2>
+    <p class="cta-sub">Deixe seu e-mail e um especialista da OXN entra em contato em até 2 horas úteis.</p>
+    <div class="cta-form-container">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@empresa.com.br" required>
+      </div>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+      </div>
+      <button type="submit" class="cta-button">Quero crescer</button>
+    </div>
+  </form>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">O<span>X</span>N</a>
+      <p>Agência digital especializada em criar, automatizar e amplificar marcas no ambiente digital.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Serviços</div>
+      <ul class="footer-links">
+        <li><a href="#">Criação de Sites</a></li>
+        <li><a href="#">Automação</a></li>
+        <li><a href="#">Campanhas Digitais</a></li>
+        <li><a href="#">Gravação de Conteúdo</a></li>
+        <li><a href="#">SEO</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Empresa</div>
+      <ul class="footer-links">
+        <li><a href="#">Sobre nós</a></li>
+        <!-- <li><a href="#">Portfólio</a></li>
+        <li><a href="#">Blog</a></li> -->
+        <li><a href="#">Carreiras</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contato</div>
+      <ul class="footer-links">
+        <li><a href="mailto:oi@oxn.digital">oi@oxn.digital</a></li>
+        <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">Paulinia, SP</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <a href="#">OXN Agência Digital</a>. Todos os direitos reservados.</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  // CORREÇÃO: função getCookie definida para obter o token CSRF dos cookies
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+  // CORREÇÃO: listener único no submit — removido o listener duplicado do click
+  // CORREÇÃO: formData.get("email") — era "envia_email" (nome do form, não do campo)
+  document.getElementById("envia_email").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    const dados = {
+      email: formData.get("email"),
+      nome: formData.get("nome"),
+      telefone: formData.get("telefone")
+    };
+
+    // Validar dados
+    if (!dados.email || !dados.nome || !dados.telefone) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    const csrftoken = getCookie('csrftoken');
+
+    fetch("/envia_email/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken": csrftoken
+      },
+      body: JSON.stringify(dados)
+    })
+    .then(response => {
+      if (response.ok) {
+        alert(`Obrigado ${dados.nome}! Em breve entraremos em contato no e-mail: ${dados.email}`);
+        this.reset();
+      } else {
+        alert('Ocorreu um erro. Tente novamente.');
+      }
+    })
+    .catch(() => {
+      alert('Erro de conexão. Tente novamente.');
+    });
+  });
+
+
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+  });
+
+  function animRing() {
+    rx += (mx - rx) * 0.15;
+    ry += (my - ry) * 0.15;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+
+  document.querySelectorAll('a,button,input').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+      ring.style.width = '50px';
+      ring.style.height = '50px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '12px';
+      cursor.style.height = '12px';
+      ring.style.width = '36px';
+      ring.style.height = '36px';
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Nav scroll effect
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 60
+      ? 'rgba(5,5,5,0.95)'
+      : 'transparent';
+  });
+</script>
+</body>
+</html>
